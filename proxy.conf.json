@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://sheetdb.io/api/v1/6a07ioovihxyt",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  

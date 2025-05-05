@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ScoreboardComponent } from "./components/scoreboard/scoreboard.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ScoreboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
