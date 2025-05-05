@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "evg-olympiades": {
+    "Bercohlanta": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/evg-olympiades",
+            "outputPath": "dist/Bercohlanta",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "evg-olympiades:build:production"
+              "buildTarget": "Bercohlanta:build:production"
             },
             "development": {
-              "buildTarget": "evg-olympiades:build:development"
+              "buildTarget": "Bercohlanta:build:development"
             }
           },
           "defaultConfiguration": "development"
