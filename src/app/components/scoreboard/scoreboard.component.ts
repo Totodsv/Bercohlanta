@@ -56,5 +56,13 @@ export class ScoreboardComponent implements OnInit {
       default: return '#888';
     }
   }
+
+  darkenColor(hex: string): string {
+    const val = parseInt(hex.replace('#', ''), 16);
+    const r = Math.max(0, ((val >> 16) & 0xff) - 40);
+    const g = Math.max(0, ((val >> 8) & 0xff) - 40);
+    const b = Math.max(0, (val & 0xff) - 40);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
   
 }

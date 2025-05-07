@@ -1,93 +1,97 @@
 .podium-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    color: #fff;
-    font-family: 'Impact', sans-serif;
-    padding: 2rem;
-    text-align: center;
-  
-    .title {
-      font-size: 3rem;
-      color: #f5b841;
-      margin-bottom: 2rem;
-      line-height: 1.1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Impact', sans-serif;
+  padding: 2rem;
+  text-align: center;
+
+  .title {
+    font-size: 3rem;
+    color: #f5b841;
+    margin-bottom: 2rem;
+  }
+
+  .totem {
+    width: 26rem;
+    height: 19rem;
+    margin-bottom: -5rem;
+    background-image: url('./../../../assets/totem.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .podium {
+    position: relative;
+    width: 37.5rem;
+    height: 29rem;
+    margin-top: -2rem;
+
+    .podium-bg {
+      width: 100%;
+      height: 100%;
+      background-image: url('./../../../assets/podiumFondBizarre.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-  
-    .podium {
+
+    .flag {
+      position: absolute;
+      width: 7rem;
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 1rem;
-      margin-bottom: 2rem;
-  
-      .step {
-        width: 7.5rem; // 120px
-        padding: 1rem;
-        color: #fff;
-        background-image: url('./../../../assets/podium-texture-roche-fissuree.png');
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: overlay; /* ou overlay, hard-light, etc. */
-        position: relative;
-        border: 0.2rem solid #000;
-        box-shadow: inset 0 -0.3rem 0 rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-  
-        .team-name {
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
-          text-shadow: 0px 0px 0px #000, 0px 0px 7px #000;
-        }
-      
-        .team-score {
-          font-size: 1.8rem;
-          font-weight: bold;
-          text-shadow: 0px 0px 0px #000, 0px 0px 7px #000;
-        }
-  
-        .rank {
-          position: absolute;
-          bottom: -3rem;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 2rem;
-          color: #000;
-        }
+      flex-direction: column;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px #000;
+
+      .flag-label {
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        text-shadow: 0 0 5px #000;
       }
-  
-      .first {
-        height: 12.5rem; // 200px
+
+      .flag-score {
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        text-shadow: 0 0 5px #000;
       }
-  
-      .second {
-        height: 9.375rem; // 150px
-      }
-  
-      .third {
-        height: 8.125rem; // 130px
-      }
+
+      // .flag-label, .flag-score {
+      //     background-image: url('./../../../assets/podium-texture-roche-fissuree.png');
+      //     background-size: cover;
+      //     background-position: center;
+      //     background-blend-mode: soft-light;
+      // }
     }
-  
-    .others {
-      margin-top: 2rem;
-      .other-team {
-        display: flex;
-        justify-content: space-between;
-        margin: 0.3rem auto;
-        font-size: 1.2rem;
-        width: 15.625rem; // 250px
-        text-shadow: 0px 0px 0px #000, 0px 0px 7px #000;
-  
-        .other-name {
-          font-weight: bold;
-        }
+
+    .flag-1 { top: 1.7rem; left: 15.3rem; }
+    .flag-2 { top: 8rem; left: 7rem; }
+    .flag-3 { top: 9.3rem; right: 7rem; }
+  }
+
+  .others {
+    margin-top: -3rem;
+
+    .other-team {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.3rem auto;
+      font-size: 1.3rem;
+      width: 15.625rem;
+      text-shadow: 0 0 0 #000, 0 0 7px #000;
+
+      .other-name {
+        font-weight: bold;
       }
     }
   }
-  
+}

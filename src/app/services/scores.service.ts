@@ -17,27 +17,27 @@ export class ScoresService {
     return of([
       {
           "Epreuves": "Relais Eau",
-          "Equipe 1": "1",
+          "Equipe 1": "5",
           "Equipe 2": "2",
           "Equipe 3": "4",
           "Equipe 4": "3",
-          "Equipe 5": "5"
+          "Equipe 5": "1"
       },
       {
           "Epreuves": "Parcous Combattant",
-          "Equipe 1": "2",
-          "Equipe 2": "4",
+          "Equipe 1": "5",
+          "Equipe 2": "1",
           "Equipe 3": "3",
-          "Equipe 4": "1",
-          "Equipe 5": "5"
+          "Equipe 4": "4",
+          "Equipe 5": "2"
       },
       {
           "Epreuves": "A l'aveugle",
-          "Equipe 1": "1",
-          "Equipe 2": "4",
+          "Equipe 1": "5",
+          "Equipe 2": "2",
           "Equipe 3": "3",
-          "Equipe 4": "2",
-          "Equipe 5": "5"
+          "Equipe 4": "4",
+          "Equipe 5": "1"
       },
       {
           "Epreuves": "Dégustation",

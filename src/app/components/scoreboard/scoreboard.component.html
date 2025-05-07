@@ -1,32 +1,48 @@
 <div class="podium-wrapper">
-    <h1 class="title">BERKOHLANTA<br /></h1>
+  <div class="totem"></div>
+  <h1 class="title">BERKOHLANTA</h1>
 
-    <div class="podium">
-      <div class="step second" [ngStyle]="{'background-color': getTeamColor(teams[1].color)}">
-        <div class="team-name">{{ teams[1].name.toUpperCase() }}</div>
-        <div class="team-score">{{ teams[1].points }}</div>
-        <div class="rank">2</div>
+  <div class="podium">
+    <div class="podium-bg"></div>
+
+    <!-- Équipe 2 -->
+    <div class="flag flag-2">
+      <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[1].color) }">
+        {{ teams[1].name.toUpperCase() }}
       </div>
-
-      <div class="step first" [ngStyle]="{'background-color': getTeamColor(teams[0].color)}">
-        <div class="team-name">{{ teams[0].name.toUpperCase() }}</div>
-        <div class="team-score">{{ teams[0].points }}</div>
-        <div class="rank">1</div>
-      </div>
-
-      <div class="step third" [ngStyle]="{'background-color': getTeamColor(teams[2].color)}">
-        <div class="team-name">{{ teams[2].name.toUpperCase() }}</div>
-        <div class="team-score">{{ teams[2].points }}</div>
-        <div class="rank">3</div>
+      <div class="flag-score" [ngStyle]="{ 'background-color': darkenColor(getTeamColor(teams[1].color)) }">
+        {{ teams[1].points }}
       </div>
     </div>
 
-    <div class="others">
-      <div class="other-team" *ngFor="let team of teams.slice(3)">
-        <span class="other-name" [ngStyle]="{'color': getTeamColor(team.color)}">
-          {{ team.name.toUpperCase() }}
-        </span>
-        <span class="other-score">{{ team.points }}</span>
+    <!-- Équipe 1 -->
+    <div class="flag flag-1">
+      <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[0].color) }">
+        {{ teams[0].name.toUpperCase() }}
+      </div>
+      <div class="flag-score" [ngStyle]="{ 'background-color': darkenColor(getTeamColor(teams[0].color)) }">
+        {{ teams[0].points }}
       </div>
     </div>
+
+    <!-- Équipe 3 -->
+    <div class="flag flag-3">
+      <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[2].color) }">
+        {{ teams[2].name.toUpperCase() }}
+      </div>
+      <div class="flag-score" [ngStyle]="{ 'background-color': darkenColor(getTeamColor(teams[2].color)) }">
+        {{ teams[2].points }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Autres équipes -->
+  <div class="others">
+    <div class="other-team" *ngFor="let team of teams.slice(3)">
+      <span class="other-name" [ngStyle]="{ 'color': getTeamColor(team.color) }">
+        {{ team.name.toUpperCase() }}
+      </span>
+      <span class="other-score">{{ team.points }}</span>
+    </div>
+  </div>
 </div>
