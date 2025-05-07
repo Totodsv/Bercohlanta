@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  body {
+    background: url('./assets/fond-a-tester.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #121212; /* fallback si l'image charge mal */
+    font-family: sans-serif;
+  }

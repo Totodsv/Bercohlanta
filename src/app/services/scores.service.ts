@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Score } from '../models/score.model';
 
 @Injectable({
@@ -12,6 +12,49 @@ export class ScoresService {
   constructor(private readonly httpClient: HttpClient) { }
 
   getScores(): any {
-    return this.httpClient.get(environment.apiUrl);
+    console.log("Bienvenue en", environment);
+    // return this.httpClient.get(`${environment.apiUrl}`);
+    return of([
+      {
+          "Epreuves": "Relais Eau",
+          "Equipe 1": "1",
+          "Equipe 2": "2",
+          "Equipe 3": "4",
+          "Equipe 4": "3",
+          "Equipe 5": "5"
+      },
+      {
+          "Epreuves": "Parcous Combattant",
+          "Equipe 1": "2",
+          "Equipe 2": "4",
+          "Equipe 3": "3",
+          "Equipe 4": "1",
+          "Equipe 5": "5"
+      },
+      {
+          "Epreuves": "A l'aveugle",
+          "Equipe 1": "1",
+          "Equipe 2": "4",
+          "Equipe 3": "3",
+          "Equipe 4": "2",
+          "Equipe 5": "5"
+      },
+      {
+          "Epreuves": "Dégustation",
+          "Equipe 1": "3",
+          "Equipe 2": "5",
+          "Equipe 3": "2",
+          "Equipe 4": "4",
+          "Equipe 5": "1"
+      },
+      {
+          "Epreuves": "Poule renard vipère",
+          "Equipe 1": "5",
+          "Equipe 2": "3",
+          "Equipe 3": "2",
+          "Equipe 4": "4",
+          "Equipe 5": "1"
+      }
+  ])
   }
 }

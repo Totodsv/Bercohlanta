@@ -1,0 +1,55 @@
+.leaf {
+  z-index: 9999;
+  position: absolute;
+  width: 3.125rem;   /* 50px */
+  height: 3.125rem;
+  background-image: url('./../assets/leaf.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.leaf-1 {
+  top: -3.75rem;     /* -60px */
+  left: 20%;
+  animation: leafFall1 12s linear infinite;
+}
+
+.leaf-2 {
+  top: -5rem;        /* -80px */
+  left: 70%;
+  animation: leafFall2 15s ease-in-out infinite;
+}
+
+@keyframes leafFall1 {
+  0% {
+    transform: rotate(0deg) translateX(0);
+    top: -3.75rem;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) translateX(-6.25rem); /* -100px */
+    top: 110vh;
+    opacity: 0;
+  }
+}
+
+@keyframes leafFall2 {
+  0% {
+    transform: rotate(0deg) translateX(0);
+    top: -5rem;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg) translateX(6.25rem); /* 100px */
+    top: 110vh;
+    opacity: 0;
+  }
+}

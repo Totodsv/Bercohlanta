@@ -45,5 +45,16 @@ export class ScoreboardComponent implements OnInit {
       console.log(this.teams);
     });
   }
+
+  getTeamColor(color: string): string {
+    switch (color) {
+      case 'red': return '#a72d2d';
+      case 'green': return '#2e7d32';
+      case 'yellow': return '#f9b233';
+      case 'purple': return '#673ab7';
+      case 'white': return '#e0e0e0';
+      default: return '#888';
+    }
+  }
   
 }

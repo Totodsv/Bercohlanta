@@ -1,48 +1,32 @@
-<h2>🏆 Classement des équipes</h2>
+<div class="podium-wrapper">
+    <h1 class="title">BERKOHLANTA<br /></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rouge</th>
-      <th>Jaune</th>
-      <th>Vert</th>
-      <th>Violet</th>
-      <th>Blanc</th>
-    </tr>
-  </thead>
-  <tbody>
-      <td>{{ scores.Equipe1 }}</td>
-      <td>{{ scores.Equipe2 }}</td>
-      <td>{{ scores.Equipe3 }}</td>
-      <td>{{ scores.Equipe4 }}</td>
-      <td>{{ scores.Equipe5 }}</td>
-  </tbody>
-</table>
+    <div class="podium">
+      <div class="step second" [ngStyle]="{'background-color': getTeamColor(teams[1].color)}">
+        <div class="team-name">{{ teams[1].name.toUpperCase() }}</div>
+        <div class="team-score">{{ teams[1].points }}</div>
+        <div class="rank">2</div>
+      </div>
 
-<div class="podium-container">
-  <div class="team podium podium-2" *ngIf="teams[1]" [ngStyle]="{ 'background-color': teams[1].color }">
-    <div class="score">2ème</div>
-    <div class="team-name" [ngClass]="teams[1].color">{{ teams[1].name }} - {{ teams[1].points }} pts</div>
-  </div>
+      <div class="step first" [ngStyle]="{'background-color': getTeamColor(teams[0].color)}">
+        <div class="team-name">{{ teams[0].name.toUpperCase() }}</div>
+        <div class="team-score">{{ teams[0].points }}</div>
+        <div class="rank">1</div>
+      </div>
 
-  <div class="team podium podium-1" *ngIf="teams[0]" [ngStyle]="{ 'background-color': teams[0].color }">
-    <div class="score">1er</div>
-    <div class="team-name" [ngClass]="teams[0].color">{{ teams[0].name }} - {{ teams[0].points }} pts</div>
-  </div>
+      <div class="step third" [ngStyle]="{'background-color': getTeamColor(teams[2].color)}">
+        <div class="team-name">{{ teams[2].name.toUpperCase() }}</div>
+        <div class="team-score">{{ teams[2].points }}</div>
+        <div class="rank">3</div>
+      </div>
+    </div>
 
-  <div class="team podium podium-3" *ngIf="teams[2]" [ngStyle]="{ 'background-color': teams[2].color }">
-    <div class="score">3ème</div>
-    <div class="team-name" [ngClass]="teams[2].color">{{ teams[2].name }} - {{ teams[2].points }} pts</div>
-  </div>
-
-  <div class="team podium podium-4" *ngIf="teams[3]" [ngStyle]="{ 'background-color': teams[3].color }">
-    <div class="score">4ème</div>
-    <div class="team-name" [ngClass]="teams[3].color">{{ teams[3].name }} - {{ teams[3].points }} pts</div>
-  </div>
-
-  <div class="team podium podium-5" *ngIf="teams[4]" [ngStyle]="{ 'background-color': teams[4].color }">
-    <div class="score">5ème</div>
-    <div class="team-name" [ngClass]="teams[4].color">{{ teams[4].name }} - {{ teams[4].points }} pts</div>
-  </div>
+    <div class="others">
+      <div class="other-team" *ngFor="let team of teams.slice(3)">
+        <span class="other-name" [ngStyle]="{'color': getTeamColor(team.color)}">
+          {{ team.name.toUpperCase() }}
+        </span>
+        <span class="other-score">{{ team.points }}</span>
+      </div>
+    </div>
 </div>
-
