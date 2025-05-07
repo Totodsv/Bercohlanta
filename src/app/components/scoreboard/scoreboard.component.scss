@@ -48,8 +48,13 @@
       box-shadow: 0 0 10px #000;
 
       .flag-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 8rem;
+        text-align: center;
         padding: 0.5rem;
-        font-size: 1.3rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
         font-weight: bold;
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
