@@ -1,13 +1,25 @@
 export interface Score {
-    Equipe1: number;
-    Equipe2: number;
-    Equipe3: number;
-    Equipe4: number;
-    Equipe5: number;
-  }
+  [key: string]: number;
+}
 
-  export interface TeamScore {
-    name: string;
-    color: string;
-    points: number;
-  }
+export interface ScoreRow {
+  [key: string]: string | number;
+}
+
+export interface TeamScore {
+  key: string;
+  name: string;
+  color: string;
+  points: number;
+}
+
+export interface TeamDefinition {
+  key: string;
+  name: string;
+  color: string;
+}
+
+export interface ScoreboardData {
+  scores: ScoreRow[];
+  teams: TeamDefinition[];
+}

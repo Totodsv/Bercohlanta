@@ -5,8 +5,7 @@
   <div class="podium">
     <div class="podium-bg"></div>
 
-    <!-- Équipe 2 -->
-    <div class="flag flag-2">
+    <div class="flag flag-2" *ngIf="teams[1]">
       <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[1].color) }">
         {{ teams[1].name.toUpperCase() }}
       </div>
@@ -15,8 +14,7 @@
       </div>
     </div>
 
-    <!-- Équipe 1 -->
-    <div class="flag flag-1">
+    <div class="flag flag-1" *ngIf="teams[0]">
       <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[0].color) }">
         {{ teams[0].name.toUpperCase() }}
       </div>
@@ -25,8 +23,7 @@
       </div>
     </div>
 
-    <!-- Équipe 3 -->
-    <div class="flag flag-3">
+    <div class="flag flag-3" *ngIf="teams[2]">
       <div class="flag-label" [ngStyle]="{ 'background-color': getTeamColor(teams[2].color) }">
         {{ teams[2].name.toUpperCase() }}
       </div>
@@ -36,8 +33,7 @@
     </div>
   </div>
 
-  <!-- Autres équipes -->
-  <div class="others">
+  <div class="others" *ngIf="teams.length > 3">
     <div class="other-team" *ngFor="let team of teams.slice(3)">
       <span class="other-name" [ngStyle]="{ 'color': getTeamColor(team.color) }">
         {{ team.name.toUpperCase() }}
